@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  api:
+    container_name: optimizer-backend
+    build: .
+    ports:
+      - "80:8000"
+    env_file:
+      - .env
+    environment:
+      - STORAGE_DIR=/app/storage
+      - UPLOAD_ROOT=/app/storage/uploads
+    volumes:
+      - ./logs:/app/logs
+      - optimizer_storage:/app/storage
+    restart: always
+
+volumes:
+  optimizer_storage:

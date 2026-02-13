@@ -1,0 +1,10 @@
+uvicorn
+fastapi
+psycopg2-binary
+flask
+pandas
+requests
+python-dotenv
+python-multipart
+tqdm
+cryptography
